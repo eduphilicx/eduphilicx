@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#14253b">
-  <meta name="description" content="EDUPhilic-এর নতুন ওয়েবসাইট আসছে। অপেক্ষার ফাঁকে Brain Sprint খেলুন।">
+  <meta name="description" content="EDUPhilic- A new website is coming soon. In the meantime, play Brain Sprint.">
   <title>EDUPhilic — An Institution for Students</title>
 
 <style>
@@ -599,7 +599,7 @@ h1 em {
          
         </div>
 
-<div class="game-shell" aria-label="Brain Sprint অঙ্কের গেম">
+<div class="game-shell" aria-label="Brain Sprint Math games">
           <div class="game-header">
             <span class="game-name">EDUPhilic / Brain Sprint</span>
             <span class="game-time">Time <strong id="time">45</strong>s</span>
@@ -618,7 +618,7 @@ h1 em {
               </div>
             </div>
 
-<div class="answers" id="answers" aria-label="উত্তরের অপশন">
+<div class="answers" id="answers" aria-label="Answer options">
               <button class="answer" type="button" disabled>—</button>
               <button class="answer" type="button" disabled>—</button>
               <button class="answer" type="button" disabled>—</button>
@@ -762,8 +762,8 @@ function endGame() {
 saveBest();
       questionLabelEl.textContent = "TIME IS UP";
       questionEl.textContent = "Well played!";
-      messageEl.textContent = `শেষ! আপনার স্কোর ${score}। আবার খেলবেন?`;
-      startEl.textContent = "আবার খেলুন ↗";
+      messageEl.textContent = `Game over! Your score is ${score}. Play again?`;
+      startEl.textContent = "Play again ↗";
     }
 
 function chooseAnswer(button, value) {
@@ -781,11 +781,11 @@ if (value === correctAnswer) {
         score++;
         scoreEl.textContent = String(score);
         button.classList.add("correct");
-        messageEl.textContent = "সঠিক! পরের প্রশ্ন আসছে।";
+        messageEl.textContent = "Correct! Here comes the next question.";
         saveBest();
       } else {
         button.classList.add("wrong");
-        messageEl.textContent = `সঠিক উত্তর ছিল ${correctAnswer}।`;
+        messageEl.textContent = `The correct answer was ${correctAnswer}।`;
       }
 
 nextQuestionTimer = setTimeout(() => {
@@ -808,7 +808,7 @@ score = 0;
 scoreEl.textContent = "0";
       timeEl.textContent = String(seconds);
       messageEl.textContent = "Choose the correct answer.";
-      startEl.textContent = "নতুন করে শুরু ↗";
+      startEl.textContent = "Starting afresh ↗";
 
 makeQuestion();
 
