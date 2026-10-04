@@ -1,836 +1,836 @@
 <!doctype html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#14253b">
-<meta name="description" content="EDUPhilic- Brain Sprint ">
-<title>EDUPhilic An Institution for Students</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14253b">
+  <meta name="description" content="EDUPhilic-এর নতুন ওয়েবসাইট আসছে। অপেক্ষার ফাঁকে Brain Sprint খেলুন।">
+  <title>EDUPhilic — A better way to learn is coming</title>
 
 <style>
-:root {
---navy: #14253b;
---navy-2: #203751;
---cream: #f8f5ec;
---paper: #fffdf7;
---ink: #1b2b3f;
---muted: #697584;
---lime: #d5ef94;
---orange: #e7a96e;
---line: #dcded7;
-}
+    :root {
+      --navy: #14253b;
+      --navy-2: #203751;
+      --cream: #f8f5ec;
+      --paper: #fffdf7;
+      --ink: #1b2b3f;
+      --muted: #697584;
+      --lime: #d5ef94;
+      --orange: #e7a96e;
+      --line: #dcded7;
+    }
 
 * { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
 
 body {
-margin: 0;
-background: var(--cream);
-color: var(--ink);
-font-family: "Noto Sans Bengali", "Hind Siliguri", system-ui, sans-serif;
-line-height: 1.65;
-}
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: "Noto Sans Bengali", "Hind Siliguri", system-ui, sans-serif;
+      line-height: 1.65;
+    }
 
 button { font: inherit; }
 
 a { color: inherit; text-decoration: none; }
 
 .container {
-width: min(1180px, calc(100% - 40px));
-margin-inline: auto;
-}
+      width: min(1180px, calc(100% - 40px));
+      margin-inline: auto;
+    }
 
 :focus-visible {
-outline: 3px solid #e7a96e;
-outline-offset: 4px;
-}
+      outline: 3px solid #e7a96e;
+      outline-offset: 4px;
+    }
 
 /* Header */
-.site-header {
-position: relative;
-z-index: 2;
-border-bottom: 1px solid #ffffff30;
-background: var(--navy);
-color: white;
-}
+    .site-header {
+      position: relative;
+      z-index: 2;
+      border-bottom: 1px solid #ffffff30;
+      background: var(--navy);
+      color: white;
+    }
 
 .nav {
-display: flex;
-justify-content: space-between;
-align-items: center;
-min-height: 82px;
-gap: 20px;
-}
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 82px;
+      gap: 20px;
+    }
 
 .logo {
-display: inline-flex;
-align-items: center;
-gap: 12px;
-font-family: Georgia, serif;
-font-size: 1.65rem;
-font-weight: 700;
-letter-spacing: -.045em;
-}
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-family: Georgia, serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: -.045em;
+    }
 
 .logo-mark {
-display: grid;
-place-items: center;
-width: 36px;
-height: 36px;
-border: 1.5px solid var(--lime);
-border-radius: 10px 10px 10px 3px;
-color: var(--lime);
-font-family: Georgia, serif;
-font-size: 1.35rem;
-transform: rotate(-8deg);
-}
+      display: grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      border: 1.5px solid var(--lime);
+      border-radius: 10px 10px 10px 3px;
+      color: var(--lime);
+      font-family: Georgia, serif;
+      font-size: 1.35rem;
+      transform: rotate(-8deg);
+    }
 
 .logo-mark span { transform: rotate(8deg); }
 
 .nav-label {
-display: flex;
-align-items: center;
-gap: 9px;
-color: #d5dfec;
-font-size: .8rem;
-font-weight: 700;
-letter-spacing: .12em;
-text-transform: uppercase;
-}
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: #d5dfec;
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
 
 .live-dot {
-width: 7px;
-height: 7px;
-border-radius: 50%;
-background: var(--lime);
-box-shadow: 0 0 0 4px #d5ef9425;
-}
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--lime);
+      box-shadow: 0 0 0 4px #d5ef9425;
+    }
 
 /* Hero */
-.hero {
-position: relative;
-overflow: hidden;
-background: var(--navy);
-color: white;
-}
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: var(--navy);
+      color: white;
+    }
 
 .hero::before {
-content: "";
-position: absolute;
-inset: 0;
-opacity: .18;
-background-image: radial-gradient(#ffffff 1px, transparent 1px);
-background-size: 28px 28px;
-mask-image: linear-gradient(to left, #000, transparent 72%);
-pointer-events: none;
-}
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .18;
+      background-image: radial-gradient(#ffffff 1px, transparent 1px);
+      background-size: 28px 28px;
+      mask-image: linear-gradient(to left, #000, transparent 72%);
+      pointer-events: none;
+    }
 
 .hero-grid {
-position: relative;
-display: grid;
-grid-template-columns: 1.08fr .92fr;
-min-height: 650px;
-align-items: center;
-gap: 40px;
-padding-block: 75px 90px;
-}
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      min-height: 650px;
+      align-items: center;
+      gap: 40px;
+      padding-block: 75px 90px;
+    }
 
 .kicker {
-display: inline-flex;
-align-items: center;
-gap: 13px;
-color: var(--lime);
-font-size: .8rem;
-font-weight: 800;
-letter-spacing: .16em;
-text-transform: uppercase;
-}
+      display: inline-flex;
+      align-items: center;
+      gap: 13px;
+      color: var(--lime);
+      font-size: .8rem;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
 
 .kicker::before {
-content: "";
-width: 27px;
-height: 1px;
-background: currentColor;
-}
+      content: "";
+      width: 27px;
+      height: 1px;
+      background: currentColor;
+    }
 
 h1, h2, h3, p { margin-top: 0; }
 
 h1 {
-max-width: 710px;
-margin: 24px 0;
-font-family: Georgia, "Times New Roman", serif;
-font-size: clamp(3.7rem, 7vw, 7rem);
-font-weight: 400;
-letter-spacing: -.065em;
-line-height: 1.08;
-}
+      max-width: 710px;
+      margin: 24px 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3.7rem, 7vw, 7rem);
+      font-weight: 400;
+      letter-spacing: -.065em;
+      line-height: 1.08;
+    }
 
 h1 em {
-display: block;
-color: var(--lime);
-font-weight: 400;
-}
+      display: block;
+      color: var(--lime);
+      font-weight: 400;
+    }
 
 .hero-description {
-max-width: 500px;
-margin-bottom: 34px;
-color: #cbd6e2;
-font-size: clamp(1rem, 1.8vw, 1.16rem);
-line-height: 1.9;
-}
+      max-width: 500px;
+      margin-bottom: 34px;
+      color: #cbd6e2;
+      font-size: clamp(1rem, 1.8vw, 1.16rem);
+      line-height: 1.9;
+    }
 
 .hero-link {
-display: inline-flex;
-align-items: center;
-gap: 17px;
-padding-bottom: 9px;
-border-bottom: 1px solid var(--lime);
-color: var(--lime);
-font-weight: 700;
-transition: gap .2s ease;
-}
+      display: inline-flex;
+      align-items: center;
+      gap: 17px;
+      padding-bottom: 9px;
+      border-bottom: 1px solid var(--lime);
+      color: var(--lime);
+      font-weight: 700;
+      transition: gap .2s ease;
+    }
 
 .hero-link:hover { gap: 25px; }
 
 /* Decorative illustration, made entirely with CSS */
-.art {
-position: relative;
-display: grid;
-place-items: center;
-width: min(100%, 475px);
-aspect-ratio: 1;
-margin-inline: auto;
-}
+    .art {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: min(100%, 475px);
+      aspect-ratio: 1;
+      margin-inline: auto;
+    }
 
 .orbit {
-position: absolute;
-width: 89%;
-aspect-ratio: 1;
-border: 1px solid #ffffff35;
-border-radius: 50%;
-}
+      position: absolute;
+      width: 89%;
+      aspect-ratio: 1;
+      border: 1px solid #ffffff35;
+      border-radius: 50%;
+    }
 
 .orbit:nth-child(2) {
-width: 69%;
-border-style: dashed;
-opacity: .75;
-}
+      width: 69%;
+      border-style: dashed;
+      opacity: .75;
+    }
 
 .orbit:nth-child(3) {
-width: 48%;
-border-color: #d5ef9480;
-}
+      width: 48%;
+      border-color: #d5ef9480;
+    }
 
 .art-center {
-position: relative;
-display: grid;
-place-items: center;
-width: 33%;
-aspect-ratio: 1;
-border-radius: 50%;
-background: var(--lime);
-color: var(--navy);
-box-shadow: 0 0 85px #d5ef9433;
-font-family: Georgia, serif;
-font-size: clamp(2.8rem, 6vw, 5.4rem);
-font-style: italic;
-}
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 33%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: var(--lime);
+      color: var(--navy);
+      box-shadow: 0 0 85px #d5ef9433;
+      font-family: Georgia, serif;
+      font-size: clamp(2.8rem, 6vw, 5.4rem);
+      font-style: italic;
+    }
 
 .art-chip {
-position: absolute;
-display: grid;
-place-items: center;
-width: 67px;
-height: 67px;
-border: 1px solid #ffffff50;
-border-radius: 17px;
-background: #2d4661;
-color: white;
-font-family: Georgia, serif;
-font-size: 1.7rem;
-box-shadow: 0 15px 35px #07152655;
-}
+      position: absolute;
+      display: grid;
+      place-items: center;
+      width: 67px;
+      height: 67px;
+      border: 1px solid #ffffff50;
+      border-radius: 17px;
+      background: #2d4661;
+      color: white;
+      font-family: Georgia, serif;
+      font-size: 1.7rem;
+      box-shadow: 0 15px 35px #07152655;
+    }
 
 .chip-one { top: 12%; left: 16%; transform: rotate(-13deg); }
-.chip-two { top: 24%; right: 3%; transform: rotate(12deg); }
-.chip-three { bottom: 9%; left: 18%; transform: rotate(10deg); }
-.chip-four { bottom: 16%; right: 10%; transform: rotate(-10deg); }
+    .chip-two { top: 24%; right: 3%; transform: rotate(12deg); }
+    .chip-three { bottom: 9%; left: 18%; transform: rotate(10deg); }
+    .chip-four { bottom: 16%; right: 10%; transform: rotate(-10deg); }
 
 .art-caption {
-position: absolute;
-right: -5%;
-bottom: -3%;
-color: #d5dfec;
-font-family: Georgia, serif;
-font-size: .85rem;
-font-style: italic;
-letter-spacing: .08em;
-}
+      position: absolute;
+      right: -5%;
+      bottom: -3%;
+      color: #d5dfec;
+      font-family: Georgia, serif;
+      font-size: .85rem;
+      font-style: italic;
+      letter-spacing: .08em;
+    }
 
 .hero-bottom {
-position: relative;
-border-top: 1px solid #ffffff30;
-}
+      position: relative;
+      border-top: 1px solid #ffffff30;
+    }
 
 .hero-bottom .container {
-display: flex;
-justify-content: space-between;
-gap: 16px;
-padding-block: 19px;
-color: #bdcbd9;
-font-size: .78rem;
-font-weight: 700;
-letter-spacing: .13em;
-text-transform: uppercase;
-}
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding-block: 19px;
+      color: #bdcbd9;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
 
 /* Transition */
-.intro {
-display: grid;
-grid-template-columns: 1fr 1fr;
-align-items: end;
-gap: 60px;
-padding-block: 100px 85px;
-border-bottom: 1px solid var(--line);
-}
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: end;
+      gap: 60px;
+      padding-block: 100px 85px;
+      border-bottom: 1px solid var(--line);
+    }
 
 .section-number {
-display: block;
-margin-bottom: 20px;
-color: #8a937c;
-font-size: .78rem;
-font-weight: 800;
-letter-spacing: .16em;
-}
+      display: block;
+      margin-bottom: 20px;
+      color: #8a937c;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .16em;
+    }
 
 .intro h2, .game-copy h2 {
-margin: 0;
-font-family: Georgia, "Times New Roman", serif;
-font-size: clamp(2.5rem, 4.5vw, 4.25rem);
-font-weight: 400;
-letter-spacing: -.055em;
-line-height: 1.15;
-}
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.5rem, 4.5vw, 4.25rem);
+      font-weight: 400;
+      letter-spacing: -.055em;
+      line-height: 1.15;
+    }
 
 .intro p {
-max-width: 440px;
-margin: 0;
-color: var(--muted);
-font-size: 1.08rem;
-line-height: 1.95;
-}
+      max-width: 440px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+      line-height: 1.95;
+    }
 
 /* Game */
-.game-section { padding-block: 90px 110px; }
+    .game-section { padding-block: 90px 110px; }
 
 .game-layout {
-display: grid;
-grid-template-columns: .8fr 1.2fr;
-gap: 65px;
-align-items: center;
-}
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 65px;
+      align-items: center;
+    }
 
 .game-copy h2 { margin-bottom: 20px; }
 
 .game-copy p:not(.section-number) {
-max-width: 340px;
-color: var(--muted);
-line-height: 1.9;
-}
+      max-width: 340px;
+      color: var(--muted);
+      line-height: 1.9;
+    }
 
 .game-note {
-display: inline-block;
-margin-top: 20px;
-padding: 11px 15px;
-border-radius: 7px;
-background: #e7ebdc;
-color: #4e6142;
-font-size: .85rem;
-font-weight: 700;
-}
+      display: inline-block;
+      margin-top: 20px;
+      padding: 11px 15px;
+      border-radius: 7px;
+      background: #e7ebdc;
+      color: #4e6142;
+      font-size: .85rem;
+      font-weight: 700;
+    }
 
 .game-shell {
-overflow: hidden;
-border: 1px solid #dce0d7;
-border-radius: 18px;
-background: var(--paper);
-box-shadow: 0 25px 65px #14253b12;
-}
+      overflow: hidden;
+      border: 1px solid #dce0d7;
+      border-radius: 18px;
+      background: var(--paper);
+      box-shadow: 0 25px 65px #14253b12;
+    }
 
 .game-header {
-display: flex;
-align-items: center;
-justify-content: space-between;
-gap: 20px;
-padding: 19px 24px;
-border-bottom: 1px solid var(--line);
-}
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 19px 24px;
+      border-bottom: 1px solid var(--line);
+    }
 
 .game-name {
-color: var(--ink);
-font-size: .8rem;
-font-weight: 850;
-letter-spacing: .13em;
-text-transform: uppercase;
-}
+      color: var(--ink);
+      font-size: .8rem;
+      font-weight: 850;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
 
 .game-time {
-color: var(--muted);
-font-size: .85rem;
-font-weight: 700;
-}
+      color: var(--muted);
+      font-size: .85rem;
+      font-weight: 700;
+    }
 
 .game-time strong {
-color: var(--ink);
-font-variant-numeric: tabular-nums;
-}
+      color: var(--ink);
+      font-variant-numeric: tabular-nums;
+    }
 
 .game-content { padding: clamp(22px, 5vw, 40px); }
 
 .game-stats {
-display: flex;
-justify-content: space-between;
-gap: 15px;
-color: var(--muted);
-font-size: .86rem;
-}
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      color: var(--muted);
+      font-size: .86rem;
+    }
 
 .game-stats strong {
-margin-left: 5px;
-color: var(--ink);
-font-size: 1rem;
-}
+      margin-left: 5px;
+      color: var(--ink);
+      font-size: 1rem;
+    }
 
 .question-area {
-display: grid;
-place-items: center;
-min-height: 155px;
-margin-block: 22px;
-border: 1px solid #e2e7d9;
-border-radius: 12px;
-background: #f2f4e9;
-text-align: center;
-}
+      display: grid;
+      place-items: center;
+      min-height: 155px;
+      margin-block: 22px;
+      border: 1px solid #e2e7d9;
+      border-radius: 12px;
+      background: #f2f4e9;
+      text-align: center;
+    }
 
 .question-area small {
-display: block;
-margin-bottom: 2px;
-color: #6c7d62;
-font-size: .78rem;
-font-weight: 800;
-letter-spacing: .12em;
-text-transform: uppercase;
-}
+      display: block;
+      margin-bottom: 2px;
+      color: #6c7d62;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
 
 .question-area strong {
-display: block;
-color: var(--ink);
-font-family: Georgia, serif;
-font-size: clamp(2.7rem, 6vw, 4.2rem);
-font-weight: 400;
-line-height: 1.2;
-}
+      display: block;
+      color: var(--ink);
+      font-family: Georgia, serif;
+      font-size: clamp(2.7rem, 6vw, 4.2rem);
+      font-weight: 400;
+      line-height: 1.2;
+    }
 
 .answers {
-display: grid;
-grid-template-columns: repeat(2, minmax(0, 1fr));
-gap: 11px;
-}
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 11px;
+    }
 
 .answer {
-min-height: 61px;
-border: 1px solid #d8ddd6;
-border-radius: 9px;
-background: white;
-color: var(--ink);
-font-size: 1.2rem;
-font-weight: 750;
-cursor: pointer;
-transition: background .18s, border-color .18s, transform .18s;
-}
+      min-height: 61px;
+      border: 1px solid #d8ddd6;
+      border-radius: 9px;
+      background: white;
+      color: var(--ink);
+      font-size: 1.2rem;
+      font-weight: 750;
+      cursor: pointer;
+      transition: background .18s, border-color .18s, transform .18s;
+    }
 
 .answer:hover:not(:disabled) {
-border-color: #9eb270;
-background: #f3f8e7;
-transform: translateY(-2px);
-}
+      border-color: #9eb270;
+      background: #f3f8e7;
+      transform: translateY(-2px);
+    }
 
 .answer:disabled { cursor: default; opacity: .6; }
-.answer.correct { border-color: #8eae5a; background: #e6f2cb; opacity: 1; }
-.answer.wrong { border-color: #d68677; background: #fbe8e3; opacity: 1; }
+    .answer.correct { border-color: #8eae5a; background: #e6f2cb; opacity: 1; }
+    .answer.wrong { border-color: #d68677; background: #fbe8e3; opacity: 1; }
 
 .game-footer {
-display: flex;
-justify-content: space-between;
-align-items: center;
-gap: 15px;
-flex-wrap: wrap;
-min-height: 86px;
-padding: 17px 24px;
-border-top: 1px solid var(--line);
-}
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      min-height: 86px;
+      padding: 17px 24px;
+      border-top: 1px solid var(--line);
+    }
 
 .game-message {
-margin: 0;
-color: var(--muted);
-font-size: .85rem;
-}
+      margin: 0;
+      color: var(--muted);
+      font-size: .85rem;
+    }
 
 .game-button {
-min-height: 41px;
-padding: 8px 17px;
-border: 0;
-border-radius: 7px;
-background: var(--navy);
-color: white;
-font-size: .85rem;
-font-weight: 750;
-cursor: pointer;
-}
+      min-height: 41px;
+      padding: 8px 17px;
+      border: 0;
+      border-radius: 7px;
+      background: var(--navy);
+      color: white;
+      font-size: .85rem;
+      font-weight: 750;
+      cursor: pointer;
+    }
 
 .game-button:hover { background: var(--navy-2); }
 
 /* Footer */
-.site-footer {
-border-top: 1px solid var(--line);
-}
+    .site-footer {
+      border-top: 1px solid var(--line);
+    }
 
 .footer-inner {
-display: flex;
-justify-content: space-between;
-gap: 20px;
-flex-wrap: wrap;
-padding-block: 28px;
-color: var(--muted);
-font-size: .85rem;
-}
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding-block: 28px;
+      color: var(--muted);
+      font-size: .85rem;
+    }
 
 .footer-inner strong { color: var(--ink); }
 
 @media (max-width: 820px) {
-.hero-grid {
-grid-template-columns: 1fr;
-padding-top: 75px;
-padding-bottom: 60px;
-}
+      .hero-grid {
+        grid-template-columns: 1fr;
+        padding-top: 75px;
+        padding-bottom: 60px;
+      }
 
 .art { width: min(370px, 90%); }
-.art-caption { right: 0; }
-.intro, .game-layout { grid-template-columns: 1fr; gap: 30px; }
-.intro { padding-block: 75px; }
-.game-section { padding-block: 75px; }
-.game-copy p:not(.section-number) { max-width: 550px; }
-}
+      .art-caption { right: 0; }
+      .intro, .game-layout { grid-template-columns: 1fr; gap: 30px; }
+      .intro { padding-block: 75px; }
+      .game-section { padding-block: 75px; }
+      .game-copy p:not(.section-number) { max-width: 550px; }
+    }
 
 @media (max-width: 480px) {
-.nav { min-height: 70px; }
-.logo { font-size: 1.4rem; }
-.nav-label { font-size: .68rem; }
-.hero-grid { padding-top: 65px; }
-h1 { font-size: clamp(3.2rem, 14vw, 4.5rem); }
-.art-chip { width: 47px; height: 47px; font-size: 1.25rem; }
-.hero-bottom .container { font-size: .67rem; }
-.game-header, .game-footer { padding-inline: 18px; }
-}
+      .nav { min-height: 70px; }
+      .logo { font-size: 1.4rem; }
+      .nav-label { font-size: .68rem; }
+      .hero-grid { padding-top: 65px; }
+      h1 { font-size: clamp(3.2rem, 14vw, 4.5rem); }
+      .art-chip { width: 47px; height: 47px; font-size: 1.25rem; }
+      .hero-bottom .container { font-size: .67rem; }
+      .game-header, .game-footer { padding-inline: 18px; }
+    }
 
 @media (prefers-reduced-motion: reduce) {
-html { scroll-behavior: auto; }
-*, *::before, *::after { transition-duration: .01ms !important; }
-}
-</style>
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
 </head>
 
 <body>
-<header class="site-header">
-<div class="container nav">
-<a href="#" class="logo" aria-label="EDUPhilic ">
-<span class="logo-mark" aria-hidden="true"><span>e</span></span>
-EDUPhilic
-</a>
-<span class="nav-label"><span class="live-dot" aria-hidden="true"></span> Coming soon</span>
-</div>
-</header>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#" class="logo" aria-label="EDUPhilic হোম">
+        <span class="logo-mark" aria-hidden="true"><span>e</span></span>
+        EDUPhilic
+      </a>
+      <span class="nav-label"><span class="live-dot" aria-hidden="true"></span> Coming soon</span>
+    </div>
+  </header>
 
 <main>
-<section class="hero" aria-labelledby="hero-title">
-<div class="container hero-grid">
-<div>
-<span class="kicker">A new chapter is on its way</span>
-<h1 id="hero-title">Curiosity<br>looks good <em>on you.</em></h1>
-<p class="hero-description">
-EDUPhilic-
-!
-</p>
-<a href="#brain-sprint" class="hero-link"> <span aria-hidden="true"></span></a>
-</div>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <span class="kicker">A new chapter is on its way</span>
+          <h1 id="hero-title">Curiosity<br>looks good <em>on you.</em></h1>
+          <p class="hero-description">
+            শেখার প্রতি ভালোবাসা থেকে EDUPhilic-এর নতুন অনলাইন ঠিকানা তৈরি হচ্ছে।
+            আমরা খুব শিগগিরই এখানে দেখা করব। ততক্ষণে আপনার মস্তিষ্ককে একটু চ্যালেঞ্জ দিন!
+          </p>
+          <a href="#brain-sprint" class="hero-link">একটি ছোট গেম খেলুন <span aria-hidden="true">↗</span></a>
+        </div>
 
 <div class="art" aria-hidden="true">
-<div class="orbit"></div>
-<div class="orbit"></div>
-<div class="orbit"></div>
-<div class="art-center">e.</div>
-<div class="art-chip chip-one"></div>
-<div class="art-chip chip-two"></div>
-<div class="art-chip chip-three">A</div>
-<div class="art-chip chip-four"></div>
-<span class="art-caption">Think. Explore. Become.</span>
-</div>
-</div>
+          <div class="orbit"></div>
+          <div class="orbit"></div>
+          <div class="orbit"></div>
+          <div class="art-center">e.</div>
+          <div class="art-chip chip-one">✳</div>
+          <div class="art-chip chip-two">π</div>
+          <div class="art-chip chip-three">A</div>
+          <div class="art-chip chip-four">✦</div>
+          <span class="art-caption">Think. Explore. Become.</span>
+        </div>
+      </div>
 
 <div class="hero-bottom">
-<div class="container">
-<span>EDUPhilic / Learning, reimagined</span>
-<span>Scroll to explore </span>
-</div>
-</div>
-</section>
+        <div class="container">
+          <span>EDUPhilic / Learning, reimagined</span>
+          <span>Scroll to explore ↓</span>
+        </div>
+      </div>
+    </section>
 
 <section class="intro container" aria-labelledby="intro-title">
-<div>
-<span class="section-number">01 / THE BEGINNING</span>
-<h2 id="intro-title"> <br> </h2>
-</div>
-<p>
-, EDUPhilic
-,
-
-</p>
-</section>
+      <div>
+        <span class="section-number">01 / THE BEGINNING</span>
+        <h2 id="intro-title">ভালো কিছু তৈরি হতে<br>একটু সময় লাগে।</h2>
+      </div>
+      <p>
+        আমরা এমন একটি ওয়েবসাইট তৈরি করছি, যেখানে EDUPhilic সম্পর্কে সব তথ্য
+        সহজেই খুঁজে পাবেন। এটি প্রস্তুত হওয়ার আগ পর্যন্ত, আপনার জন্য নিচে
+        রেখেছি ছোট্ট একটি মজার চ্যালেঞ্জ।
+      </p>
+    </section>
 
 <section class="game-section container" id="brain-sprint" aria-labelledby="game-title">
-<div class="game-layout">
-<div class="game-copy">
-<span class="section-number">02 / TAKE A LITTLE BREAK</span>
-<h2 id="game-title">Ready for a<br>brain sprint?</h2>
-<p>
+      <div class="game-layout">
+        <div class="game-copy">
+          <span class="section-number">02 / TAKE A LITTLE BREAK</span>
+          <h2 id="game-title">Ready for a<br>brain sprint?</h2>
+          <p>
+            ৪৫ সেকেন্ডে যত বেশি পারেন অঙ্কের সঠিক উত্তর দিন।
+            ভুল হলে চিন্তা নেই—পরের প্রশ্নে আবার চেষ্টা করুন।
+          </p>
+          <span class="game-note">✦ কোনো অ্যাকাউন্ট লাগবে না—শুধু খেলুন!</span>
+        </div>
 
-
-</p>
-<span class="game-note"> !</span>
-</div>
-
-<div class="game-shell" aria-label="Brain Sprint ">
-<div class="game-header">
-<span class="game-name">EDUPhilic / Brain Sprint</span>
-<span class="game-time"> <strong id="time">45</strong>s</span>
-</div>
+<div class="game-shell" aria-label="Brain Sprint অঙ্কের গেম">
+          <div class="game-header">
+            <span class="game-name">EDUPhilic / Brain Sprint</span>
+            <span class="game-time">সময় <strong id="time">45</strong>s</span>
+          </div>
 
 <div class="game-content">
-<div class="game-stats">
-<span> <strong id="score">0</strong></span>
-<span> <strong id="best">0</strong></span>
-</div>
+            <div class="game-stats">
+              <span>স্কোর <strong id="score">0</strong></span>
+              <span>সর্বোচ্চ <strong id="best">0</strong></span>
+            </div>
 
 <div class="question-area">
-<div>
-<small id="question-label">A LITTLE WARM-UP</small>
-<strong id="question">Ready?</strong>
-</div>
-</div>
+              <div>
+                <small id="question-label">A LITTLE WARM-UP</small>
+                <strong id="question">Ready?</strong>
+              </div>
+            </div>
 
-<div class="answers" id="answers" aria-label=" ">
-<button class="answer" type="button" disabled></button>
-<button class="answer" type="button" disabled></button>
-<button class="answer" type="button" disabled></button>
-<button class="answer" type="button" disabled></button>
-</div>
-</div>
+<div class="answers" id="answers" aria-label="উত্তরের অপশন">
+              <button class="answer" type="button" disabled>—</button>
+              <button class="answer" type="button" disabled>—</button>
+              <button class="answer" type="button" disabled>—</button>
+              <button class="answer" type="button" disabled>—</button>
+            </div>
+          </div>
 
 <div class="game-footer">
-<p class="game-message" id="message" role="status" aria-live="polite">
-
-</p>
-<button class="game-button" type="button" id="start"> </button>
-</div>
-</div>
-</div>
-</section>
-</main>
+            <p class="game-message" id="message" role="status" aria-live="polite">
+              শুরু করতে নিচের বোতাম চাপুন।
+            </p>
+            <button class="game-button" type="button" id="start">গেম শুরু করুন ↗</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
 <footer class="site-footer">
-<div class="container footer-inner">
-<span><strong>EDUPhilic</strong> </span>
-<span> <span id="year"></span> EDUPhilic. Coming soon.</span>
-</div>
-</footer>
+    <div class="container footer-inner">
+      <span><strong>EDUPhilic</strong> — শেখার প্রতি ভালোবাসা।</span>
+      <span>© <span id="year"></span> EDUPhilic. Coming soon.</span>
+    </div>
+  </footer>
 
 <script>
-"use strict";
+    "use strict";
 
 const timeEl = document.getElementById("time");
-const scoreEl = document.getElementById("score");
-const bestEl = document.getElementById("best");
-const questionEl = document.getElementById("question");
-const questionLabelEl = document.getElementById("question-label");
-const answersEl = document.getElementById("answers");
-const messageEl = document.getElementById("message");
-const startEl = document.getElementById("start");
+    const scoreEl = document.getElementById("score");
+    const bestEl = document.getElementById("best");
+    const questionEl = document.getElementById("question");
+    const questionLabelEl = document.getElementById("question-label");
+    const answersEl = document.getElementById("answers");
+    const messageEl = document.getElementById("message");
+    const startEl = document.getElementById("start");
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
 const GAME_SECONDS = 45;
-const BEST_KEY = "eduphilic-brain-sprint-best";
+    const BEST_KEY = "eduphilic-brain-sprint-best";
 
 let score = 0;
-let best = 0;
-let seconds = GAME_SECONDS;
-let correctAnswer = null;
-let running = false;
-let locked = false;
-let timer = null;
-let nextQuestionTimer = null;
+    let best = 0;
+    let seconds = GAME_SECONDS;
+    let correctAnswer = null;
+    let running = false;
+    let locked = false;
+    let timer = null;
+    let nextQuestionTimer = null;
 
 try {
-best = Number(localStorage.getItem(BEST_KEY)) || 0;
-} catch (_) {
-// The game still works if browser storage is unavailable.
-}
-bestEl.textContent = String(best);
+      best = Number(localStorage.getItem(BEST_KEY)) || 0;
+    } catch (_) {
+      // The game still works if browser storage is unavailable.
+    }
+    bestEl.textContent = String(best);
 
 function randomInt(min, max) {
-return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
 
 function shuffle(list) {
-const items = [...list];
-for (let i = items.length - 1; i > 0; i--) {
-const j = randomInt(0, i);
-[items[i], items[j]] = [items[j], items[i]];
-}
-return items;
-}
+      const items = [...list];
+      for (let i = items.length - 1; i > 0; i--) {
+        const j = randomInt(0, i);
+        [items[i], items[j]] = [items[j], items[i]];
+      }
+      return items;
+    }
 
 function makeQuestion() {
-const type = randomInt(0, 2);
-let a, b, symbol;
+      const type = randomInt(0, 2);
+      let a, b, symbol;
 
 if (type === 0) {
-a = randomInt(3, 30);
-b = randomInt(3, 30);
-symbol = "+";
-correctAnswer = a + b;
-} else if (type === 1) {
-a = randomInt(12, 45);
-b = randomInt(2, a);
-symbol = "";
-correctAnswer = a - b;
-} else {
-a = randomInt(2, 9);
-b = randomInt(2, 9);
-symbol = "";
-correctAnswer = a * b;
-}
+        a = randomInt(3, 30);
+        b = randomInt(3, 30);
+        symbol = "+";
+        correctAnswer = a + b;
+      } else if (type === 1) {
+        a = randomInt(12, 45);
+        b = randomInt(2, a);
+        symbol = "−";
+        correctAnswer = a - b;
+      } else {
+        a = randomInt(2, 9);
+        b = randomInt(2, 9);
+        symbol = "×";
+        correctAnswer = a * b;
+      }
 
 questionLabelEl.textContent = "SOLVE THIS";
-questionEl.textContent = `${a} ${symbol} ${b} = ?`;
+      questionEl.textContent = `${a} ${symbol} ${b} = ?`;
 
 const options = new Set([correctAnswer]);
-while (options.size < 4) {
-const offset = randomInt(-12, 12);
-const candidate = correctAnswer + offset;
-if (candidate >= 0) options.add(candidate);
-}
+      while (options.size < 4) {
+        const offset = randomInt(-12, 12);
+        const candidate = correctAnswer + offset;
+        if (candidate >= 0) options.add(candidate);
+      }
 
 answersEl.replaceChildren();
-shuffle([...options]).forEach((value) => {
-const button = document.createElement("button");
-button.type = "button";
-button.className = "answer";
-button.textContent = String(value);
-button.addEventListener("click", () => chooseAnswer(button, value));
-answersEl.appendChild(button);
-});
+      shuffle([...options]).forEach((value) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "answer";
+        button.textContent = String(value);
+        button.addEventListener("click", () => chooseAnswer(button, value));
+        answersEl.appendChild(button);
+      });
 
 locked = false;
-}
+    }
 
 function saveBest() {
-if (score <= best) return;
+      if (score <= best) return;
 
 best = score;
-bestEl.textContent = String(best);
+      bestEl.textContent = String(best);
 
 try {
-localStorage.setItem(BEST_KEY, String(best));
-} catch (_) {
-// Saving a personal best is optional.
-}
-}
+        localStorage.setItem(BEST_KEY, String(best));
+      } catch (_) {
+        // Saving a personal best is optional.
+      }
+    }
 
 function endGame() {
-running = false;
-locked = true;
-clearInterval(timer);
-clearTimeout(nextQuestionTimer);
-timer = null;
-nextQuestionTimer = null;
+      running = false;
+      locked = true;
+      clearInterval(timer);
+      clearTimeout(nextQuestionTimer);
+      timer = null;
+      nextQuestionTimer = null;
 
 [...answersEl.children].forEach((button) => {
-button.disabled = true;
-});
+        button.disabled = true;
+      });
 
 saveBest();
-questionLabelEl.textContent = "TIME IS UP";
-questionEl.textContent = "Well played!";
-messageEl.textContent = `! ${score} ?`;
-startEl.textContent = " ";
-}
+      questionLabelEl.textContent = "TIME IS UP";
+      questionEl.textContent = "Well played!";
+      messageEl.textContent = `শেষ! আপনার স্কোর ${score}। আবার খেলবেন?`;
+      startEl.textContent = "আবার খেলুন ↗";
+    }
 
 function chooseAnswer(button, value) {
-if (!running || locked) return;
+      if (!running || locked) return;
 
 locked = true;
-[...answersEl.children].forEach((option) => {
-option.disabled = true;
-if (Number(option.textContent) === correctAnswer) {
-option.classList.add("correct");
-}
-});
+      [...answersEl.children].forEach((option) => {
+        option.disabled = true;
+        if (Number(option.textContent) === correctAnswer) {
+          option.classList.add("correct");
+        }
+      });
 
 if (value === correctAnswer) {
-score++;
-scoreEl.textContent = String(score);
-button.classList.add("correct");
-messageEl.textContent = "! ";
-saveBest();
-} else {
-button.classList.add("wrong");
-messageEl.textContent = ` ${correctAnswer}`;
-}
+        score++;
+        scoreEl.textContent = String(score);
+        button.classList.add("correct");
+        messageEl.textContent = "সঠিক! পরের প্রশ্ন আসছে।";
+        saveBest();
+      } else {
+        button.classList.add("wrong");
+        messageEl.textContent = `সঠিক উত্তর ছিল ${correctAnswer}।`;
+      }
 
 nextQuestionTimer = setTimeout(() => {
-nextQuestionTimer = null;
-if (running) makeQuestion();
-}, 650);
-}
+        nextQuestionTimer = null;
+        if (running) makeQuestion();
+      }, 650);
+    }
 
 function startGame() {
-clearInterval(timer);
-clearTimeout(nextQuestionTimer);
-timer = null;
-nextQuestionTimer = null;
+      clearInterval(timer);
+      clearTimeout(nextQuestionTimer);
+      timer = null;
+      nextQuestionTimer = null;
 
 score = 0;
-seconds = GAME_SECONDS;
-running = true;
-locked = false;
+      seconds = GAME_SECONDS;
+      running = true;
+      locked = false;
 
 scoreEl.textContent = "0";
-timeEl.textContent = String(seconds);
-messageEl.textContent = " ";
-startEl.textContent = " ";
+      timeEl.textContent = String(seconds);
+      messageEl.textContent = "সঠিক উত্তরটি বেছে নিন।";
+      startEl.textContent = "নতুন করে শুরু ↗";
 
 makeQuestion();
 
 timer = setInterval(() => {
-seconds--;
-timeEl.textContent = String(seconds);
-if (seconds <= 0) endGame();
-}, 1000);
-}
+        seconds--;
+        timeEl.textContent = String(seconds);
+        if (seconds <= 0) endGame();
+      }, 1000);
+    }
 
 startEl.addEventListener("click", startGame);
-</script>
+  </script>
 </body>
 </html>
