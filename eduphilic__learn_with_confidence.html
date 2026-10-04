@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="EDUPhilic coaching center demo homepage">
+  <title>EDUPhilic — Learn with confidence</title>
+  <style>
+    :root {
+      --ink: #19243d;
+      --muted: #607087;
+      --blue: #3158d5;
+      --light-blue: #edf2ff;
+      --cream: #fffaf1;
+      --border: #e4e9f2;
+    }
+
+* { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #fff;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+
+header { border-bottom: 1px solid var(--border); background: #fff; }
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand { font-size: 1.5rem; font-weight: 850; letter-spacing: -0.06em; }
+    .brand span { color: var(--blue); }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a:not(.button) { color: var(--muted); font-weight: 600; }
+    .nav-links a:hover { color: var(--blue); }
+
+.button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 11px 22px;
+      border-radius: 12px;
+      background: var(--blue);
+      color: #fff;
+      font-weight: 700;
+      transition: transform .2s, background .2s;
+    }
+    .button:hover { background: #2447b5; transform: translateY(-2px); }
+    .button.secondary { background: #fff; color: var(--ink); border: 1px solid var(--border); }
+    .button.secondary:hover { background: var(--light-blue); }
+
+.hero {
+      padding: 90px 0;
+      background: radial-gradient(circle at 85% 20%, #e6edff, transparent 36%),
+        linear-gradient(140deg, #fff 30%, var(--cream));
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 64px;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: var(--light-blue);
+      color: var(--blue);
+      font-size: .85rem;
+      font-weight: 800;
+      letter-spacing: .02em;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 700px; margin: 22px 0; font-size: clamp(2.8rem, 6vw, 5rem); line-height: 1.08; letter-spacing: -.065em; }
+    h1 em { color: var(--blue); font-style: normal; }
+    .hero p { max-width: 530px; color: var(--muted); font-size: 1.12rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+
+.visual {
+      position: relative;
+      padding: 28px;
+      border: 1px solid #dfe7ff;
+      border-radius: 30px;
+      background: #dfe8ff;
+      box-shadow: 0 28px 65px #253d7920;
+    }
+    .visual::before {
+      content: "";
+      position: absolute;
+      width: 105px;
+      height: 105px;
+      right: -20px;
+      top: -30px;
+      border-radius: 50%;
+      background: #ffce78;
+      z-index: 0;
+    }
+    .lesson-card {
+      position: relative;
+      z-index: 1;
+      padding: 28px;
+      border-radius: 23px;
+      background: #fff;
+    }
+    .lesson-top { display: flex; justify-content: space-between; gap: 16px; align-items: center; }
+    .lesson-top strong { font-size: 1.1rem; }
+    .lesson-top small { color: var(--muted); }
+    .pill { padding: 5px 10px; border-radius: 99px; background: #e8f8ef; color: #188150; font-size: .75rem; font-weight: 800; }
+    .equation {
+      display: grid;
+      place-items: center;
+      min-height: 180px;
+      margin: 24px 0;
+      border-radius: 18px;
+      background: #f3f6ff;
+      color: var(--blue);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      letter-spacing: -.06em;
+    }
+    .progress-label { display: flex; justify-content: space-between; font-size: .84rem; font-weight: 700; }
+    .track { height: 9px; margin-top: 10px; border-radius: 99px; background: #e8ecf4; }
+    .track span { display: block; width: 68%; height: 100%; border-radius: inherit; background: #ffb84d; }
+    .visual-note { position: relative; z-index: 1; margin: 18px 4px 0; color: #465575; font-weight: 700; }
+
+section { padding: 82px 0; }
+    .section-heading { max-width: 680px; margin-bottom: 32px; }
+    .section-heading h2 { margin: 12px 0; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; letter-spacing: -.05em; }
+    .section-heading p, .card p, .approach p { color: var(--muted); }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { padding: 28px; border: 1px solid var(--border); border-radius: 20px; background: #fff; }
+    .icon { display: grid; place-items: center; width: 50px; height: 50px; margin-bottom: 22px; border-radius: 14px; background: var(--light-blue); color: var(--blue); font-size: 1.4rem; font-weight: 800; }
+    .card h3 { margin-bottom: 8px; font-size: 1.25rem; }
+    .card p { margin-bottom: 0; }
+
+.approach { background: #f7f9fe; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .step { padding: 24px 0; border-top: 2px solid #cbd8fb; }
+    .step b { color: var(--blue); }
+    .step h3 { margin: 12px 0 6px; }
+
+.cta {
+      margin: 0 auto 80px;
+      padding: 55px;
+      border-radius: 26px;
+      background: var(--ink);
+      color: #fff;
+      text-align: center;
+    }
+    .cta h2 { margin: 0 0 12px; font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -.05em; }
+    .cta p { margin-bottom: 26px; color: #cbd5e9; }
+    .cta .button { background: #ffca75; color: var(--ink); }
+    .cta .button:hover { background: #ffd899; }
+    footer { padding: 28px 0; border-top: 1px solid var(--border); color: var(--muted); }
+    .footer-inner { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+@media (max-width: 760px) {
+      .nav { align-items: flex-start; padding: 18px 0; flex-direction: column; }
+      .nav-links { width: 100%; flex-wrap: wrap; gap: 14px 20px; font-size: .9rem; }
+      .nav-links .button { min-height: 40px; padding: 8px 14px; }
+      .hero { padding: 65px 0; }
+      .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+      .cards, .steps { grid-template-columns: 1fr; }
+      section { padding: 64px 0; }
+      .cta { width: min(1120px, calc(100% - 40px)); padding: 40px 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#" aria-label="EDUPhilic home">EDU<span>Philic.</span></a>
+      <div class="nav-links">
+        <a href="#programs">Programs</a>
+        <a href="#approach">Our approach</a>
+        <a class="button" href="#start">Get started</a>
+      </div>
+    </nav>
+  </header>
+
+<main>
+    <div class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">A better way to learn</span>
+          <h1>Big dreams start with <em>strong basics.</em></h1>
+          <p>Welcome to EDUPhilic — a welcoming space to understand concepts, practice with purpose, and grow more confident in every lesson.</p>
+          <div class="actions">
+            <a class="button" href="#programs">Explore programs →</a>
+            <a class="button secondary" href="#approach">How we teach</a>
+          </div>
+        </div>
+        <div class="visual" aria-label="Illustration of a learning dashboard">
+          <div class="lesson-card">
+            <div class="lesson-top">
+              <div><strong>Today's focus</strong><br><small>Learn one step at a time</small></div>
+              <span class="pill">Keep going</span>
+            </div>
+            <div class="equation" aria-hidden="true">a² + b² = c²</div>
+            <div class="progress-label"><span>Practice session</span><span>In progress</span></div>
+            <div class="track" aria-hidden="true"><span></span></div>
+          </div>
+          <p class="visual-note">Curiosity today. Confidence tomorrow.</p>
+        </div>
+      </div>
+    </div>
+
+<section id="programs" class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Explore learning</span>
+        <h2>Find your next area of focus.</h2>
+        <p>This demo highlights subjects your coaching center could feature. Update them to match your actual programs.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="icon" aria-hidden="true">∑</div>
+          <h3>Mathematics</h3>
+          <p>Build a strong foundation through clear explanations and regular practice.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">✳</div>
+          <h3>Science</h3>
+          <p>Explore ideas, understand the why, and connect concepts to real life.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">Aa</div>
+          <h3>English</h3>
+          <p>Strengthen reading, writing, and communication one skill at a time.</p>
+        </article>
+      </div>
+    </section>
+
+<section id="approach" class="approach">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">The EDUPhilic approach</span>
+          <h2>Learning that makes sense.</h2>
+          <p>A simple framework for presenting your teaching approach.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><b>01 / Understand</b><h3>Start with the concept</h3><p>Break down new topics into approachable ideas.</p></div>
+          <div class="step"><b>02 / Practice</b><h3>Make it stick</h3><p>Apply what you learn with purposeful exercises.</p></div>
+          <div class="step"><b>03 / Grow</b><h3>Keep moving forward</h3><p>Review progress and build confidence over time.</p></div>
+        </div>
+      </div>
+    </section>
+
+<section id="start" class="container">
+      <div class="cta">
+        <h2>Ready to make learning click?</h2>
+        <p>Discover what you could learn with EDUPhilic.</p>
+        <a class="button" href="#programs">Explore programs →</a>
+      </div>
+    </section>
+  </main>
+
+<footer>
+    <div class="container footer-inner">
+      <span>© 2026 EDUPhilic. Demo website.</span>
+      <span>Built for curious minds.</span>
+    </div>
+  </footer>
+</body>
+</html>
